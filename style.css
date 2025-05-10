@@ -1,0 +1,80 @@
+:root {
+  --bg-color: #1d1d1d;
+  --text-color: #ffffff;
+  --accent-color: #00ffff;
+}
+
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  transition: background 0.5s, color 0.5s;
+}
+
+.container {
+  text-align: center;
+  padding: 20px;
+  background-color: #222;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+  width: 90%;
+  max-width: 400px;
+}
+
+.clock .day {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: var(--accent-color);
+}
+
+.clock .date {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  color: #a0e6ff;
+}
+
+.clock .time {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--accent-color);
+}
+
+.controls {
+  margin-top: 20px;
+}
+
+.controls button {
+  background: none;
+  border: 1px solid var(--accent-color);
+  color: var(--accent-color);
+  padding: 8px 12px;
+  margin: 5px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.controls button:hover {
+  background-color: var(--accent-color);
+  color: #000;
+}
+
+@media (max-width: 500px) {
+  .clock .time {
+    font-size: 2rem;
+  }
+  .clock .day, .clock .date {
+    font-size: 1rem;
+  }
+}
+
+.light-mode {
+  --bg-color: #f0f0f0;
+  --text-color: #000000;
+  --accent-color: #007acc;
+}
